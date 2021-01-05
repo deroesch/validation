@@ -10,6 +10,10 @@ import javax.validation.constraints.PositiveOrZero;
  */
 public class ValidationUtils {
 
+    private ValidationUtils() {
+        super();
+    }
+
     /**
      * Implements NotNull and positiveOrZero for Integers
      */
