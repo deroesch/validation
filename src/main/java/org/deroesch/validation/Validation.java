@@ -48,7 +48,7 @@ public class Validation implements Cloneable {
      * @param string the string to set
      */
     public void setString(@NotNull final String string) {
-        this.string = Objects.requireNonNull(string);
+        this.string = Objects.requireNonNull(string, "argument must be non-null");
     }
 
     @Override
