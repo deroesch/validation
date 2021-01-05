@@ -32,8 +32,8 @@ class ValidationTest {
      */
     @Test
     void testHashCode() throws CloneNotSupportedException {
-        final Validation v1 = (Validation) v.clone();
-        final Validation v2 = (Validation) v.clone();
+        final ValidationUtils v1 = (ValidationUtils) v.clone();
+        final ValidationUtils v2 = (ValidationUtils) v.clone();
 
         assertEquals(v1.hashCode(), v2.hashCode());
     }
@@ -118,8 +118,8 @@ class ValidationTest {
      */
     @Test
     void testEqualsObject() throws CloneNotSupportedException {
-        final Validation v1 = (Validation) v.clone();
-        final Validation v2 = (Validation) v.clone();
+        final ValidationUtils v1 = (ValidationUtils) v.clone();
+        final ValidationUtils v2 = (ValidationUtils) v.clone();
         final Object obj = new Object();
 
         assertEquals(v1, v2);

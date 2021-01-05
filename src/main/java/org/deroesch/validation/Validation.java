@@ -26,14 +26,14 @@ public class Validation implements Cloneable {
     @NotNull
     @PositiveOrZero
     public Integer getInteger() {
-        return positiveOrZero(integer);
+        return ValidationUtils.positiveOrZero(integer);
     }
 
     /**
      * @param integer the integer to set
      */
     public void setInteger(@NotNull @PositiveOrZero final Integer integer) {
-        this.integer = positiveOrZero(integer);
+        this.integer = ValidationUtils.positiveOrZero(integer);
     }
 
     /**
@@ -78,16 +78,6 @@ public class Validation implements Cloneable {
         builder.append(string);
         builder.append("]");
         return builder.toString();
-    }
-
-    /**
-     * Implement NotNull and positiveOrZero for Integers
-     */
-    private Integer positiveOrZero(@NotNull @PositiveOrZero @NotNull final Integer integer) {
-        Objects.requireNonNull(integer);
-        if (integer < 0)
-            throw new IllegalArgumentException("integer must be >= 0");
-        return integer;
     }
 
     @NotNull
